@@ -40,7 +40,7 @@ jobs:
 
       - name: Update appcast.json
         run: |
-          python3 scripts/update_release.py ${{ steps.get_version.outputs.version-without-v }} '${{ steps.tag.outputs.message }}'
+          python3 scripts/release.py ${{ steps.get_version.outputs.version-without-v }} '${{ steps.tag.outputs.message }}'
       
       - name: Commit files
         run: |
