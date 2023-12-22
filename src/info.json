@@ -1,24 +1,24 @@
-  {
-    "identifier": "gle.gemini.translator",
-    "version": "0.0.4",
-    "category": "translate",
-    "name": "Gemini Translator",
-    "summary": "Gemini powered translator",
-    "icon": "",
-    "author": "Brain <827421256@qq.com>",
-    "minBobVersion": "0.5.0",
-    "appcast": "https://raw.githubusercontent.com/Brain777777/bob-plugin-gemini/main/appcast.json",
-    "options": [
-      {
-        "identifier": "apiKeys",
-        "type": "text",
-        "title": "API KEY",
-        "desc": "必填项",
-        "textConfig": {
-          "type": "secure",
-          "height": "40",
-          "placeholderText": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-        }
+{
+  "identifier": "gle.gemini.translator",
+  "version": "0.0.4",
+  "category": "translate",
+  "name": "Gemini Translator",
+  "summary": "Gemini powered translator",
+  "icon": "",
+  "author": "Brain <827421256@qq.com>",
+  "minBobVersion": "0.5.0",
+  "appcast": "https://raw.githubusercontent.com/Brain777777/bob-plugin-gemini/main/appcast.json",
+  "options": [
+    {
+      "identifier": "apiKeys",
+      "type": "text",
+      "title": "API KEY",
+      "desc": "必填项",
+      "textConfig": {
+        "type": "secure",
+        "height": "40",
+        "placeholderText": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       }
-    ]
-  }
+    }
+  ]
+}
