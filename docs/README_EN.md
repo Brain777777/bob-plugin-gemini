@@ -1,5 +1,5 @@
 <h4 align="right">
-  <strong>English</strong> | <a href="https://github.com/Brain777777/bob-plugin-gemini/main/README.md">简体中文</a>
+  <strong>English</strong> | <a href="https://github.com/Brain777777/bob-plugin-gemini/blob/main/README.md">简体中文</a>
 </h4>
 
 <div>
