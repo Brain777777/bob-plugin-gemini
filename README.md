@@ -37,6 +37,8 @@
 
 5. 把 API KEY 填入 Bob 偏好设置 > 服务 > 此插件配置界面的 API KEY 的输入框中
 
+6. 如果需要使用代理记得看下 google AI 已开放的[地区](https://ai.google.dev/available_regions?hl=zh-cn)
+
 ## 感谢
 
 强大的是 Bob 本身，向它的开发者 [ripperhe](https://github.com/ripperhe) 致敬！
