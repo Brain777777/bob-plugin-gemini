@@ -1,6 +1,7 @@
 //@ts-check
 
 var lang = require("./lang.js");
+var SYSTEM_PROMPT = require("./constant.js").SYSTEM_PROMPT;
 
 var {
     ensureHttpsAndNoTrailingSlash,
@@ -12,10 +13,12 @@ var {
 /**
  * @param {Bob.TranslateQuery} query
  * @returns {{ 
+ *  generatedSystemPrompt: string 
  *  generatedUserPrompt: string 
  * }}
 */
 function generatePrompts(query) {
+    let generatedSystemPrompt = SYSTEM_PROMPT;
     const { detectFrom, detectTo } = query;
     const sourceLang = lang.langMap.get(detectFrom) || detectFrom;
     const targetLang = lang.langMap.get(detectTo) || detectTo;
@@ -39,9 +42,20 @@ function generatePrompts(query) {
         }
     }
 
+    if (detectFrom === detectTo) {
+        generatedSystemPrompt =
+            "You are a text embellisher, you can only embellish the text, don't interpret it.";
+        if (detectTo === "zh-Hant" || detectTo === "zh-Hans") {
+            generatedUserPrompt = "润色此句";
+        } else {
+            generatedUserPrompt = "polish this sentence";
+        }
+    }
+
+
     generatedUserPrompt = `${generatedUserPrompt}:\n\n${query.text}`
 
-    return { generatedUserPrompt };
+    return { generatedSystemPrompt,generatedUserPrompt };
 }
 
 /**
@@ -50,9 +64,25 @@ function generatePrompts(query) {
  * @returns Record
 */
 function buildRequestBody (query) {
-    const { generatedUserPrompt } = generatePrompts(query);
+    const { generatedUserPrompt ,generatedSystemPrompt} = generatePrompts(query);
     return {
       contents: [
+          {
+            role: "user",
+            parts: [
+              {
+                text: generatedSystemPrompt
+              }
+            ]
+          },
+          {
+            role: "model",
+            parts: [
+              {
+                text: generatedSystemPrompt.replace('You are ','Im ')
+              }
+            ]
+          },
           {
             role: "user",
             parts: [
