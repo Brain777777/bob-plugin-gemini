@@ -20,6 +20,17 @@
         "height": "40",
         "placeholderText": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       }
-    }
+    },
+    {
+      "identifier": "apiUrl",
+      "type": "text",
+      "title": "API URL",
+      "defaultValue": "https://generativelanguage.googleapis.com",
+      "desc": "可选项。如果您的网络环境需要代理才能访问 Gemini API, 可在这里修改为反向代理 API 的地址",
+      "textConfig": {
+        "type": "visible",
+        "placeholderText": "https://generativelanguage.googleapis.com"
+      }
+    },
   ]
 }
