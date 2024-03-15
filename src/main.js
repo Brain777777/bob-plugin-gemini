@@ -164,7 +164,7 @@ function translate(query,completion) {
 
     const apiKey = getApiKey($option.apiKeys);
     const baseUrl = ensureHttpsAndNoTrailingSlash(apiUrl || "https://generativelanguage.googleapis.com");
-    let apiUrlPath =  "/v1/models/gemini-pro:generateContent?key=" + apiKey;
+    let apiUrlPath =  "/v1beta/models/gemini-pro:generateContent?key=" + apiKey;
     const body = buildRequestBody(query);
     (async () => {
       const result = await $http.request({
