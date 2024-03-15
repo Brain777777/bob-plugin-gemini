@@ -2,6 +2,13 @@
   "identifier": "gle.gemini.translator",
   "versions": [
     {
+      "version": "0.0.6",
+      "desc": "",
+      "sha256": "876eb9adb4b8f2644dfe2d347a6ece62c419970fa9ef8adca89f23f1bf6934ad",
+      "url": "https://github.com/Brain777777/bob-plugin-gemini/releases/download/v0.0.6/gemini-translator-0.0.6.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.0.5",
       "desc": "",
       "sha256": "9d412e4e36a76a39d6ee24d6291c787341c62d39d60daabf04e60fa2dd4c5dfd",
