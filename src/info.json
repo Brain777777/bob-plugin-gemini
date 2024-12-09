@@ -31,6 +31,17 @@
         "type": "visible",
         "placeholderText": "https://generativelanguage.googleapis.com"
       }
+    },
+    {
+      "identifier": "models",
+      "type": "text",
+      "title": "自定义模型",
+      "defaultValue": "gemini-1.5-pro",
+      "desc": "可选项。选择自己需要的模型",
+      "textConfig": {
+        "type": "visible",
+        "placeholderText": "gemini-1.5-pro"
+      }
     }
   ]
 }
