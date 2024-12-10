@@ -1,6 +1,6 @@
 {
   "identifier": "gle.gemini.translator",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "category": "translate",
   "name": "Gemini Translator",
   "summary": "Gemini powered translator",
